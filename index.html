@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ff7ac6">
+    <meta name="description" content="JJ World: keliling planet perjalanan hidup Joshua Joviando, dari lahir sampai sekarang.">
+    <title>JJ World</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <canvas id="career-world" aria-label="Planet 3D perjalanan hidup Joshua Joviando"></canvas>
+
+    <header class="topbar">
+        <div class="wordmark">JJ WORLD <span>· joshua joviando</span></div>
+        <div class="keys" id="keys" aria-hidden="true"><kbd>←</kbd><kbd>→</kbd> jalan · klik layar juga bisa</div>
+    </header>
+
+    <section class="start-screen" id="start-screen" aria-label="Mulai perjalanan">
+        <p class="kicker">🌍 ONE LIFE · TWENTY WORLDS · ENDLESS LOOP</p>
+        <h1>Selamat datang<br>di <span class="rainbow">JJ World.</span></h1>
+        <p class="lede">Dari bayi, TK, SD, SMP, SMA, kuliah, sampai kerja dan bikin usaha sendiri. Jovi tumbuh di sepanjang planet, dan tiap pindah chapter kendaraannya beda.</p>
+        <button id="start-button" type="button" disabled>Memuat planet…</button>
+        <p class="start-hint"><kbd>←</kbd> <kbd>→</kbd> atau klik layar untuk jalan</p>
+    </section>
+
+    <div class="caption" id="caption" aria-live="polite" hidden></div>
+
+    <article class="card" id="milestone-card" aria-live="polite" aria-atomic="true" hidden>
+        <div class="card-top">
+            <span class="chip" id="chapter-no"></span>
+            <span class="date" id="milestone-date"></span>
+        </div>
+        <h2 id="milestone-company"></h2>
+        <p class="role" id="milestone-role"></p>
+        <p class="detail" id="milestone-detail"></p>
+        <p class="next" id="milestone-next"></p>
+    </article>
+
+    <nav class="dots" id="dots" aria-label="Lompat ke chapter" hidden></nav>
+
+    <div class="mobile-controls" id="mobile-controls" hidden>
+        <button type="button" data-move="-1" aria-label="Mundur ke chapter sebelumnya">←</button>
+        <button type="button" data-move="1" aria-label="Lanjut ke chapter berikutnya">→</button>
+    </div>
+
+    <p class="scene-error" id="scene-error" role="status" aria-live="polite"></p>
+</body>
+</html>
